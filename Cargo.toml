@@ -1,5 +1,5 @@
 [package]
-name = "fast-package-manager"
+name = "mnpm"
 version = "0.1.0"
 edition = "2021"
 

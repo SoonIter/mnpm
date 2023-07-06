@@ -9,5 +9,5 @@ pub mod npm;
 mod package_manifest;
 mod resolve_version_range;
 
-pub const STORE_FOLDER: &str = ".fpm";
+pub const STORE_FOLDER: &str = ".mnpm";
 pub const DEPS_FOLDER: &str = "node_modules";

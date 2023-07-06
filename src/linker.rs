@@ -115,7 +115,7 @@ pub async fn hardlink_package(package_name: &String, version: &Version) -> anyho
 fn hardlink(source: PathBuf, dest: PathBuf) -> anyhow::Result<()> {
     let files = std::fs::read_dir(source)?;
 
-    for file in files {
+    files.for_each(|file| {
         if let Ok(file) = file {
             if let Ok(file_type) = file.file_type() {
                 if file_type.is_dir() && file.file_name() != "node_modules" {
@@ -151,7 +151,7 @@ fn hardlink(source: PathBuf, dest: PathBuf) -> anyhow::Result<()> {
                 }
             }
         }
-    }
+    });
 
     Ok(())
 }

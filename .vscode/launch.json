@@ -7,15 +7,15 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug executable 'fast-package-manager'",
+      "name": "Debug executable 'mnpm'",
       "cargo": {
         "args": [
           "build",
-          "--bin=fast-package-manager",
-          "--package=fast-package-manager"
+          "--bin=mnpm",
+          "--package=mnpm"
         ],
         "filter": {
-          "name": "fast-package-manager",
+          "name": "mnpm",
           "kind": "bin"
         }
       },
@@ -25,11 +25,11 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug unit tests in library 'fast-package-manager'",
+      "name": "Debug unit tests in library 'mnpm'",
       "cargo": {
-        "args": ["test", "--no-run", "--lib", "--package=fast-package-manager"],
+        "args": ["test", "--no-run", "--lib", "--package=mnpm"],
         "filter": {
-          "name": "fast-package-manager",
+          "name": "mnpm",
           "kind": "lib"
         }
       },
@@ -39,16 +39,16 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug unit tests in executable 'fast-package-manager'",
+      "name": "Debug unit tests in executable 'mnpm'",
       "cargo": {
         "args": [
           "test",
           "--no-run",
-          "--bin=fast-package-manager",
-          "--package=fast-package-manager"
+          "--bin=mnpm",
+          "--package=mnpm"
         ],
         "filter": {
-          "name": "fast-package-manager",
+          "name": "mnpm",
           "kind": "bin"
         }
       },
