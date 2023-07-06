@@ -18,16 +18,35 @@ derive_more = "0.99.17"
 flate2 = "1.0.25"
 futures = "0.3.25"
 futures-util = "0.3.25"
-indexmap = { version = "1.9.2", features = ["serde-1"] }
+indexmap = { version = "1.9.2", features = [
+    "serde-1",
+] }
 mockall = "0.11.3"
 node-semver = "2.1.0"
 pin-project = "1.0.12"
-reqwest = { version = "0.11.14", features = ["json", "stream"] }
-serde = { version = "1.0.152", features = ["derive"] }
-serde_json = { version = "1.0.91", features = ["preserve_order"] }
+reqwest = { version = "0.11.14", features = [
+    "json",
+    "stream",
+] }
+serde = { version = "1.0.152", features = [
+    "derive",
+] }
+serde_json = { version = "1.0.91", features = [
+    "preserve_order",
+] }
 tar = "0.4.38"
 tempfile = "3.3.0"
 thiserror = "1.0.38"
-tokio = { version = "1.25.0", features = ["full"] }
+tokio = { version = "1.25.0", features = [
+    "full",
+] }
 tokio-tar = "0.3.0"
-tokio-util = { version = "0.7.7", features = ["compat", "io-util"] }
+tokio-util = { version = "0.7.7", features = [
+    "compat",
+    "io-util",
+] }
+
+[workspace]
+members = [
+    "crates/*",
+]

@@ -1,0 +1,6 @@
+{
+  "*.rs": "rustfmt --edition 2021",
+  "packages/**/*.{ts,js}": ["prettier --write", "eslint --fix"],
+  "crates/rspack_plugin_runtime/**/*.{ts,js}": ["prettier --write", "eslint --fix"],
+  "*.toml": "npx @taplo/cli format"
+}

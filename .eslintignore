@@ -1,0 +1,18 @@
+.docusaurus/
+build/
+cjs/
+coverage/
+dist/
+dts/
+esm/
+lib/
+mjs/
+node_modules/
+umd/
+*.min.js
+*.map
+*.snap
+*.d.ts
+
+# Test fixtures
+/tests

@@ -1,0 +1,26 @@
+{
+  "name": "mnpm-root",
+  "version": "1.0.0",
+  "scripts": {
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "simple-git-hooks": "2.8.1",
+    "lint-staged": "13.2.3",
+    "@commitlint/cli": "17.6.6",
+    "@commitlint/config-conventional": "17.6.6",
+    "eslint": "8.44.0",
+    "eslint-config-moon": "2.0.5",
+    "prettier": "3.0.0",
+    "prettier-config-moon": "1.1.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/lint-staged",
+    "commit-msg": "./node_modules/.bin/commitlint -e $HUSKY_GIT_PARAMS"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --fix"
+    ]
+  }
+}

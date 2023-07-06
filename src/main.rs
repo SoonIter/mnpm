@@ -1,6 +1,6 @@
 #![deny(clippy::pedantic, clippy::cargo)]
 
-use fast_package_manager::{
+use mnpm::{
     config::Config, install_manifest::install_manifest, install_package::install_package,
     npm::VersionRangeSpecifier, DEPS_FOLDER, STORE_FOLDER,
 };
@@ -36,7 +36,6 @@ async fn main() -> anyhow::Result<()> {
         // Err(error) if error.kind() != ErrorKind::AlreadyExists => return Err(error.into()),
         _ => {}
     }
-    println!("123");
 
     // let ip = lookup_host("registry.npmjs.org:443")
     //     .await?

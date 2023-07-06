@@ -123,28 +123,28 @@ fn hardlink(source: PathBuf, dest: PathBuf) -> anyhow::Result<()> {
 
                     match std::fs::create_dir_all(&sub_dir) {
                         Err(error) if error.kind() != ErrorKind::AlreadyExists => {
-                            return Err(error.into())
+                            // return Err(error);
                         }
                         _ => {}
                     }
 
                     match hardlink(file.path().clone(), sub_dir) {
                         Err(error) if error.downcast_ref() == Some(&ErrorKind::AlreadyExists) => {
-                            return Err(error)
+                            // return Err(error)
                         }
                         _ => {}
                     }
                 } else if file_type.is_file() {
                     match std::fs::create_dir_all(&dest) {
                         Err(error) if error.kind() != ErrorKind::AlreadyExists => {
-                            return Err(error.into())
+                            // return Err(error.into())
                         }
                         _ => {}
                     }
 
                     match std::fs::hard_link(file.path(), dest.join(file.file_name())) {
                         Err(error) if error.kind() != ErrorKind::AlreadyExists => {
-                            return Err(error.into())
+                            // return Err(error.into())
                         }
                         _ => {}
                     }

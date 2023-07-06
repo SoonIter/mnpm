@@ -20,7 +20,7 @@
         }
       },
       "args": [],
-      "cwd": "${workspaceFolder}/examples/playground"
+      "cwd": "${workspaceFolder}/tests/fixtures/basic"
     },
     {
       "type": "lldb",
@@ -34,7 +34,7 @@
         }
       },
       "args": [],
-      "cwd": "${workspaceFolder}"
+      "cwd": "${workspaceFolder}/tests/fixtures/basic"
     },
     {
       "type": "lldb",
@@ -53,7 +53,7 @@
         }
       },
       "args": [],
-      "cwd": "${workspaceFolder}"
+      "cwd": "${workspaceFolder}/tests/fixtures/basic"
     }
   ]
 }
