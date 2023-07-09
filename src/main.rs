@@ -1,9 +1,9 @@
 #![deny(clippy::pedantic, clippy::cargo)]
-
 use mnpm::{
     config::Config, install_manifest::install_manifest, install_package::install_package,
     npm::VersionRangeSpecifier, DEPS_FOLDER, STORE_FOLDER,
 };
+use rustc_hash::FxHashMap as HashMap;
 use std::{collections::HashMap, env, fs, io::ErrorKind};
 
 #[tokio::main]
